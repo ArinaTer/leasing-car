@@ -726,12 +726,20 @@
             gap: 16px
 
     &__form-input
+        position: relative
         display: flex
         flex-flow: column-reverse
         width: 100%
 
     .form-label, .form-input
         transition: all 0.2s
+        touch-action: manipulation
+
+    .form-label
+        font-size: 16px
+        line-height: 150%
+        color: #575757
+        +gBold
 
     .form-input
         background: #F3F3F4
@@ -743,6 +751,7 @@
         border: 1px solid transparent
         border-radius: 16px
         box-shadow: 0 0 0 0.25rem transparent
+        -webkit-appearance: none
         +gBold
 
         &:focus
@@ -755,37 +764,61 @@
             opacity: 0
 
     .form-input:placeholder-shown + .form-label
-        padding: 0 24px
-        max-width: 100%
+        cursor: text
+        max-width: 66.66%
         white-space: nowrap
         overflow: hidden
         text-overflow: ellipsis
-        cursor: text
-        transform-origin: left bottom
-        transform: translate(0, 2.125rem)
-        font-size: 16px
-        line-height: 150%
-        color: #575757
-        +gBold
+        transform-origin: left center
+        transform: translate(25px, 2.125rem) scale(1.5)
 
         ::-webkit-input-placeholder
-            transition: inherit
             opacity: 0
+            transition: inherit
 
     .form-input:focus::-webkit-input-placeholder
         opacity: 1
-        transform: translate(0, 0.5rem)
-
-    .form-input:focus::-webkit-input
-        transform: translate(0, 0.5rem)
 
     .form-input:not(:placeholder-shown) + .form-label,
     .form-input:focus + .form-label
-        transform: translate(0, 1.3rem)
+        transform: translate(0, 0) scale(1)
         cursor: pointer
-        font-size: 12px
-        color: #575757
-        +gReg
+
+        // &::placeholder
+        //     opacity: 0
+
+    // .form-input:placeholder-shown + .form-label
+    //     padding: 0 24px
+    //     max-width: 100%
+    //     white-space: nowrap
+    //     overflow: hidden
+    //     text-overflow: ellipsis
+    //     cursor: text
+    //     transform-origin: left bottom
+    //     transform: translate(0, 2.125rem)
+    //     font-size: 16px
+    //     line-height: 150%
+    //     color: #575757
+    //     +gBold
+
+    //     ::-webkit-input-placeholder
+    //         transition: inherit
+    //         opacity: 0
+
+    // .form-input:focus::-webkit-input-placeholder
+    //     opacity: 1
+    //     transform: translate(0, 0.5rem)
+
+    // .form-input:focus::-webkit-input
+    //     transform: translate(0, 0.5rem)
+
+    // .form-input:not(:placeholder-shown) + .form-label,
+    // .form-input:focus + .form-label
+    //     transform: translate(0, 1.3rem)
+    //     cursor: pointer
+    //     font-size: 12px
+    //     color: #575757
+    //     +gReg
 
     &__agreement
         +r(576)

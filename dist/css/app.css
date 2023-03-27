@@ -1496,12 +1496,20 @@ a {
   }
 }
 .modal__form-input {
+  position: relative;
   display: flex;
   flex-flow: column-reverse;
   width: 100%;
 }
 .modal .form-label, .modal .form-input {
   transition: all 0.2s;
+  touch-action: manipulation;
+}
+.modal .form-label {
+  font-size: 16px;
+  line-height: 150%;
+  color: #575757;
+  font-family: "GilroyBold", arial, sans-serif;
 }
 .modal .form-input {
   background: #F3F3F4;
@@ -1513,6 +1521,7 @@ a {
   border: 1px solid transparent;
   border-radius: 16px;
   box-shadow: 0 0 0 0.25rem transparent;
+  -webkit-appearance: none;
   font-family: "GilroyBold", arial, sans-serif;
 }
 .modal .form-input:focus {
@@ -1525,37 +1534,25 @@ a {
   opacity: 0;
 }
 .modal .form-input:placeholder-shown + .form-label {
-  padding: 0 24px;
-  max-width: 100%;
+  cursor: text;
+  max-width: 66.66%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  cursor: text;
-  transform-origin: left bottom;
-  transform: translate(0, 2.125rem);
-  font-size: 16px;
-  line-height: 150%;
-  color: #575757;
-  font-family: "GilroyBold", arial, sans-serif;
+  transform-origin: left center;
+  transform: translate(25px, 2.125rem) scale(1.5);
 }
 .modal .form-input:placeholder-shown + .form-label ::-webkit-input-placeholder {
-  transition: inherit;
   opacity: 0;
+  transition: inherit;
 }
 .modal .form-input:focus::-webkit-input-placeholder {
   opacity: 1;
-  transform: translate(0, 0.5rem);
-}
-.modal .form-input:focus::-webkit-input {
-  transform: translate(0, 0.5rem);
 }
 .modal .form-input:not(:placeholder-shown) + .form-label,
 .modal .form-input:focus + .form-label {
-  transform: translate(0, 1.3rem);
+  transform: translate(0, 0) scale(1);
   cursor: pointer;
-  font-size: 12px;
-  color: #575757;
-  font-family: "GilroyRegular", arial, sans-serif;
 }
 @media only screen and (max-width: 576px) {
   .modal__agreement {

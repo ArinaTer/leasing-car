@@ -39,38 +39,6 @@ myFunctions.isWebp();
 
 // Swiper banner
 (function bannerSwipe() {
-  // const progressCircle = document.querySelector(".autoplay-progress svg");
-  // const progressContent = document.querySelector(".autoplay-progress span");
-
-  // const viewsSlider = new Swiper(".banner .swiper", {
-  //   modules: [Navigation, Pagination, EffectFade, Autoplay],
-  //   centeredSlides: true,
-  //   watchSlidesProgress: true,
-  //   // autoplay: {
-  //   //   delay: 5000,
-  //   //   disableOnInteraction: false,
-  //   // },
-  //   effect: "fade",
-
-  //   // Pagination arrows
-  //   pagination: {
-  //     el: ".banner .swiper-pagination",
-  //     clickable: true,
-  //   },
-
-  //   // Navigation arrows
-  //   navigation: {
-  //     prevEl: ".banner .banner__swiper-arrow .banner__swiper-arrow-prev",
-  //     nextEl: ".banner .banner__swiper-arrow .banner__swiper-arrow-next",
-  //   },
-  //   on: {
-  //     autoplayTimeLeft(s, time, progress) {
-  //       console.log(s, time, progress);
-  //       progressCircle.style.setProperty("--progress", 1 - progress);
-  //       progressContent.textContent = `${Math.ceil(time / 1000)}s`;
-  //     },
-  //   },
-  // });
 
   const progressBar = document.querySelector(".banner__swiper-__progress");
   const progressBar1 = document.querySelector(".swiper-progress");
