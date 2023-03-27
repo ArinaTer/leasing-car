@@ -1,0 +1,45 @@
+.button_primary
+	background-color: $primary
+	border-radius: 40px
+	color: $white
+	transition: .5s
+	&:hover:not([disabled])
+		background-color: #111111
+
+	&:active
+		background-color: #575757
+
+	&[disabled]
+		cursor: revert
+		opacity: 0.4
+
+.button_outlined
+	border: 1px solid $primary
+	border-radius: 40px
+	color: $primary
+	transition: .5s
+	&:hover:not([disabled])
+		color: $white
+		background-color: $primary
+
+	&:active
+		background-color: #FFA83D
+
+	&[disabled]
+		cursor: revert
+		opacity: 0.4
+
+.button_gray
+	background-color: #F3F3F4
+	border-radius: 40px
+	color: $white
+	transition: .5s
+	&:hover:not([disabled])
+		background-color: #111111
+
+	&:active
+		background-color: #575757
+
+	&[disabled]
+		cursor: revert
+		opacity: 0.4

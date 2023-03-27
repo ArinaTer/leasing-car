@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/app.min.css">
+</head>
+
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="header__container container">
+                <div class="header__left">
+                    <div class="header__logo">
+                        <a href="#" class="desctop">
+                            <img src="img/logo.svg" alt="">
+                        </a>
+                        <a href="#" class="mobile">
+                            <img src="img/logo-mob.svg" alt="">
+                        </a>
+                        <div class="header__slogan">
+                            <span>лизинговая компания</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__right">
+                    <nav class="header__nav">
+                        <div class="header__dropdown">
+                            <a href="#leasing" class="header__nav-link">Лизинг</a>
+                            <div class="header__dropdown-content">
+                                <a class="header__dropdown-link" href="#">Для личного пользования</a>
+                                <a class="header__dropdown-link" href="#">Для юридических диц</a>
+                                <a class="header__dropdown-link" href="#">Калькулятор</a>
+                            </div>
+                        </div>
+                        <a class="header__nav-link" href="#catalog">Каталог</a>
+                        <a class="header__nav-link" href="#about">О нас</a>
+                    </nav>
+                    <div class="header__button">
+                        <button class="button_outlined" type="button" data-toggle="modal">Оставить заявку</button>
+                    </div>
+                </div>
+                <div class="header__burger">
+                    <button class="header__burger-button" type="button">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1_3312)">
+                                <path d="M5.33334 8H26.6667" stroke="currentColor" stroke-width="2.75" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M5.33334 16H26.6667" stroke="currentColor" stroke-width="2.75" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M5.33334 24H21.3333" stroke="currentColor" stroke-width="2.75" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1_3312">
+                                    <rect width="32" height="32" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="header__menu-mobile">
+                <div class="transparent-overlay"></div>
+                <div class="header__menu-container">
+                    <button class="header__menu-close" type="button">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.5996 9.40039L9.40028 22.5997" stroke="black" stroke-width="2.75"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M9.40039 9.40039L22.5997 22.5997" stroke="black" stroke-width="2.75"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <nav class="header__nav">
+                        <a href="#leasing" class="header__nav-link">Лизинг</a>
+                        <a class="header__nav-link" href="#catalog">Каталог</a>
+                        <a class="header__nav-link" href="#about">О нас</a>
+                    </nav>
+                    <div class="header__button">
+                        <button class="button_primary" type="button" data-toggle="modal">Оставить заявку</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="banner">
+            <div class="banner__container container">
+                <div class="banner__swiper swiper">
+                    <div class="banner__swiper-wrapper swiper-wrapper">
+                        <div class="banner__swiper-slide swiper-slide">
+                            <div class="banner__swiper-body">
+                                <div class="banner__swiper-headline">
+                                    <h1 class="banner__swiper-title">Авто в лизинг для физических лиц</h1>
+                                    <p class="banner__swiper-subtitle">Получите машину за 5 дней</p>
+                                    <button type="button" class="banner__swiper-button button_primary" id="loadButton">
+                                        <span>Оставить заявку</span>
+                                        <svg id="loading" width="21" height="21" viewBox="0 0 21 21" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M13.8691 19.3825C11.9455 20.1121 9.83718 20.1976 7.86093 19.6261C5.88468 19.0546 4.14734 17.857 2.91009 16.2134C1.67285 14.5698 1.00256 12.569 1.00001 10.5118C0.99745 8.45459 1.66276 6.45212 2.89591 4.80546C4.12906 3.15879 5.86342 1.95691 7.83825 1.38051C9.81307 0.804109 11.9216 0.88433 13.847 1.60911C15.7723 2.3339 17.4103 3.66408 18.5148 5.39968C19.6193 7.13528 20.1305 9.18251 19.9716 11.2336"
+                                                stroke="white" stroke-width="2" stroke-linecap="round" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="banner__swiper-img">
+                                    <img src="img/slide-1.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banner__swiper-slide swiper-slide">
+                            <div class="banner__swiper-body">
+                                <div class="banner__swiper-headline">
+                                    <h1 class="banner__swiper-title">Авто в лизинг для юридических лиц</h1>
+                                    <p class="banner__swiper-subtitle">Получите машину за 15 дней</p>
+                                    <button type="button" class="banner__swiper-button button_primary">Оставить
+                                        заявку</button>
+                                </div>
+                                <div class="banner__swiper-img">
+                                    <img src="img/slide-1.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banner__swiper-slide swiper-slide">
+                            <div class="banner__swiper-body">
+                                <div class="banner__swiper-headline">
+                                    <h1 class="banner__swiper-title">Авто в лизинг для физических лиц</h1>
+                                    <p class="banner__swiper-subtitle">Получите машину за 5 дней</p>
+                                    <button type="button" class="banner__swiper-button button_primary">Оставить
+                                        заявку</button>
+                                </div>
+                                <div class="banner__swiper-img">
+                                    <img src="img/slide-1.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banner__swiper-slide swiper-slide">
+                            <div class="banner__swiper-body">
+                                <div class="banner__swiper-headline">
+                                    <h1 class="banner__swiper-title">Авто в лизинг для юридических лиц</h1>
+                                    <p class="banner__swiper-subtitle">Получите машину за 15 дней</p>
+                                    <button type="button"
+                                        class="banner__swiper-button button_primary button_loading">Оставить
+                                        заявку</button>
+                                </div>
+                                <div class="banner__swiper-img">
+                                    <img src="img/slide-1.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banner__swiper-pagination swiper-pagination"></div>
+                    </div>
+                    <div class="banner__swiper-arrow">
+                        <button class="banner__swiper-arrow-prev swiper-button-prev" type="button"></button>
+                        <button class="banner__swiper-arrow-next swiper-button-next" type="button"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="leasink-calc">
+            <div class="leasink-calc__container container">
+                <div class="leasink-calc__title">
+                    <h2>Рассчитайте стоимость <br> автомобиля в лизинг</h2>
+                </div>
+                <form class="leasink-calc__form" id="calc-form">
+                    <div class="leasink-calc__row">
+                        <div class="leasink-calc__col">
+                            <label for="" class="form-label">Стоимость автомобиля</label>
+                            <div class="leasink-calc__group">
+                                <input type="text" class="form-input" placeholder="3 300 000"
+                                    aria-describedby="basic-addon1">
+                                <input type="range" class="form-input-range" value="0" min="0" max="100">
+                                <span class="form-input-text" id="basic-addon1">₽</span>
+                            </div>
+                        </div>
+                        <div class="leasink-calc__col">
+                            <label for="" class="form-label">Первоначальный взнос</label>
+                            <div class="leasink-calc__group">
+                                <input type="text" class="form-input" placeholder="420 000 ₽"
+                                    aria-describedby="basic-addon2">
+                                <input type="range" class="form-input-range" value="0" min="0" max="100">
+                                <span class="form-input-text form-input-text-item" id="basic-addon2">13%</span>
+                            </div>
+                        </div>
+                        <div class="leasink-calc__col">
+                            <label for="" class="form-label">Срок лизинга</label>
+                            <div class="leasink-calc__group">
+                                <input type="text" class="form-input" placeholder="60" aria-describedby="basic-addon2">
+                                <input type="range" class="form-input-range" value="0" min="0" max="100">
+                                <span class="form-input-text" id="basic-addon2">мес.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="leasink-calc__row">
+                        <div class="leasink-calc__col">
+                            <dl class="leasink-calc__result">
+                                <dt>Сумма договора лизинга</dt>
+                                <dd>4 467 313 ₽</dd>
+                            </dl>
+                        </div>
+                        <div class="leasink-calc__col">
+                            <dl class="leasink-calc__result">
+                                <dt>Ежемесячный платеж от</dt>
+                                <dd>114 455 ₽</dd>
+                            </dl>
+                        </div>
+                        <div class="leasink-calc__col">
+                            <button type="button" class="leasink-calc__button button_primary" disabled>Оставить
+                                заявку</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="transparent-overlay"></div>
+        <div class="modal__container">
+            <div class="modal__content">
+                <button class="modal__button-close">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="48" height="48" rx="24" fill="#F3F3F4" />
+                        <path d="M30.5996 17.4004L17.4003 30.5997" stroke="#828282" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M17.4004 17.4004L30.5997 30.5997" stroke="#828282" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <div class="modal__title">
+                    <h2>Онлайн-заявка</h2>
+                </div>
+                <div class="modal__subtitle">
+                    <p>Заполните форму, и мы вскоре свяжемся с вами, чтобы <br> ответить на все вопросы</p>
+                </div>
+                <form class="modal__form" action="">
+                    <div class="modal__row">
+                        <div class="modal__form-input">
+                            <input class="form-input" id="phone" type="tel" placeholder="+7 (921) 123 45 67" name="tel"
+                                required />
+                            <label class="form-label" for="phone">Телефон</label>
+                        </div>
+                        <div class="modal__form-input">
+                            <input class="form-input" id="name" type="text" name="text" placeholder="Имя" required />
+                            <label class="form-label" for="name">Имя</label>
+                        </div>
+                    </div>
+                    <div class="modal__row">
+                        <div class="modal__agreement">
+                            <p>Нажимая на кнопку «Оставить заявку», я даю <br> согласие <a href="#">на обработку
+                                    персональных
+                                    данных</a></p>
+                        </div>
+                        <button type="submit" class="modal__button button_primary" disabled>Оставить заявку</button>
+                    </div>
+                </form>
+                <div class="modal__socials">
+                    <a href="#">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M24.0001 14.7999C18.9273 14.7999 14.8001 18.9271 14.8001 23.9999C14.8001 25.5839 15.2093 27.1415 15.9853 28.5159L14.8149 32.6919C14.7765 32.8291 14.8137 32.9763 14.9129 33.0783C14.9893 33.1571 15.0933 33.1999 15.2001 33.1999C15.2321 33.1999 15.2645 33.1959 15.2961 33.1883L19.6545 32.1087C20.9853 32.8231 22.4841 33.1999 24.0001 33.1999C29.0729 33.1999 33.2001 29.0727 33.2001 23.9999C33.2001 18.9271 29.0729 14.7999 24.0001 14.7999ZM28.6281 27.2463C28.4313 27.7911 27.4873 28.2883 27.0337 28.3551C26.6265 28.4147 26.1113 28.4403 25.5457 28.2627C25.2029 28.1547 24.7629 28.0115 24.1993 27.7711C21.8301 26.7607 20.2829 24.4051 20.1645 24.2495C20.0465 24.0939 19.2001 22.9851 19.2001 21.8375C19.2001 20.6899 19.8101 20.1255 20.0269 19.8919C20.2437 19.6583 20.4993 19.5999 20.6569 19.5999C20.8145 19.5999 20.9717 19.6019 21.1097 19.6083C21.2549 19.6155 21.4497 19.5535 21.6413 20.0087C21.8381 20.4759 22.3105 21.6235 22.3689 21.7407C22.4281 21.8575 22.4673 21.9939 22.3889 22.1495C22.3105 22.3051 22.2713 22.4023 22.1529 22.5387C22.0345 22.6751 21.9049 22.8427 21.7985 22.9475C21.6801 23.0639 21.5573 23.1899 21.6949 23.4235C21.8325 23.6571 22.3065 24.4207 23.0089 25.0391C23.9109 25.8335 24.6721 26.0799 24.9081 26.1967C25.1441 26.3135 25.2821 26.2939 25.4197 26.1383C25.5573 25.9823 26.0101 25.4571 26.1673 25.2239C26.3245 24.9907 26.4821 25.0291 26.6989 25.1071C26.9157 25.1847 28.0769 25.7487 28.3129 25.8655C28.5489 25.9823 28.7065 26.0407 28.7657 26.1379C28.8249 26.2347 28.8249 26.7019 28.6281 27.2463Z"
+                                fill="#575757" />
+                            <rect x="1" y="1" width="46" height="46" rx="23" stroke="#F3F3F4" stroke-width="2" />
+                        </svg>
+                    </a>
+                    <a href="#">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M20.6186 27.2189L28.7717 32.7684C29.7021 33.2414 30.3736 32.9965 30.6053 31.9726L33.924 17.5644C34.2638 16.3094 33.4048 15.7402 32.5147 16.1125L13.0272 23.0353C11.697 23.5269 11.7048 24.2106 12.7847 24.5153L17.7857 25.9533L29.3634 19.2239C29.9099 18.9186 30.4116 19.0827 29.9998 19.4194"
+                                fill="#575757" />
+                            <rect x="1" y="1" width="46" height="46" rx="23" stroke="#F3F3F4" stroke-width="2" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>
