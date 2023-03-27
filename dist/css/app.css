@@ -1509,12 +1509,16 @@ a {
   font-size: 16px;
   line-height: 150%;
   color: #575757;
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  transform: translate(0, -50%);
   font-family: "GilroyBold", arial, sans-serif;
 }
 .modal .form-input {
   background: #F3F3F4;
   border-radius: 16px;
-  padding: 12px 24px;
+  padding: 18px 24px 6px;
   font-size: 16px;
   line-height: 150%;
   color: #575757;
@@ -1539,8 +1543,6 @@ a {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  transform-origin: left center;
-  transform: translate(25px, 2.125rem) scale(1.5);
 }
 .modal .form-input:placeholder-shown + .form-label ::-webkit-input-placeholder {
   opacity: 0;
@@ -1551,7 +1553,8 @@ a {
 }
 .modal .form-input:not(:placeholder-shown) + .form-label,
 .modal .form-input:focus + .form-label {
-  transform: translate(0, 0) scale(1);
+  left: 20px;
+  transform: translate(0, -100%) scale(0.8);
   cursor: pointer;
 }
 @media only screen and (max-width: 576px) {
