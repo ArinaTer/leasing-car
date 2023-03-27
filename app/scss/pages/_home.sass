@@ -265,6 +265,13 @@
             right: initial
             top: initial
             margin: initial
+            transition: .5s
+
+            &:hover
+                background-color: rgba(255, 255, 255, 0.2)
+
+            &:active
+                background-color: rgba(255, 255, 255, 0.4)
 
             &::after
                 content: url(../img/arrow-prev.svg)
@@ -277,9 +284,9 @@
                 height: 100%
 
         &-arrow-next
-            border: 2px solid $white
-            width: 48px
-            height: 48px
+            border: 2px solid rgba(255, 255, 255, 0.2)
+            width: 50px
+            height: 50px
             border-radius: 100%
             display: flex
             justify-content: center
@@ -289,6 +296,13 @@
             right: initial
             top: initial
             margin: initial
+            transition: .5s
+
+            &:hover
+                background-color: rgba(255, 255, 255, 0.2)
+
+            &:active
+                background-color: rgba(255, 255, 255, 0.4)
 
             &::after
                 content: url(../img/arrow-next.svg)
@@ -297,6 +311,16 @@
                 left: 50%
                 transform: translate(-50%, -50%)
                 font-size: initial
+
+        .swiper-progress
+            position: absolute
+            color: $white
+            stroke-dasharray: 150
+            stroke-dashoffset: 150
+            animation-name: swiperProgress
+            animation-duration: 10s
+            animation-timing-function: linear
+            animation-iteration-count: 1
 
         &-body
             width: 100%
@@ -795,13 +819,6 @@
                     rect
                         stroke: #E7E7E7
 
-@keyframes swiperProgress
-    0%
-        stroke-dashoffset: 150
-
-    100%
-        stroke-dashoffset: 0
-
 @keyframes rotating
 
     from
@@ -811,3 +828,16 @@
     to
 
         transform: rotate(360deg)
+
+@keyframes swiperProgress
+    0%
+        stroke-dashoffset: 150
+    100%
+        stroke-dashoffset: 0
+
+@keyframes progress
+    from
+        width: 0%
+
+    to
+        width: 100%
