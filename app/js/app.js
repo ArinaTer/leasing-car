@@ -3,6 +3,8 @@ import * as myFunctions from "./modules/functions.js";
 import SmoothScroll from "smoothscroll-for-websites";
 import Swiper, { Navigation, Pagination, EffectFade, Autoplay } from "swiper";
 
+import Inputmask from "inputmask/dist/inputmask.es6.js";
+
 myFunctions.isWebp();
 
 // Scroller
@@ -39,7 +41,6 @@ myFunctions.isWebp();
 
 // Swiper banner
 (function bannerSwipe() {
-
   const progressBar = document.querySelector(".banner__swiper-__progress");
   const progressBar1 = document.querySelector(".swiper-progress");
 
@@ -102,6 +103,11 @@ myFunctions.isWebp();
       document.body.style.overflowY = "hidden";
     });
   });
+
+  let inputMask = document.getElementById("phone-mask");
+
+  let mask = new Inputmask("+9 (999) 999 99 99");
+  mask.mask(inputMask);
 })();
 
 (function buttonLoading() {

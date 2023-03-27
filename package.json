@@ -48,6 +48,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "inputmask": "^5.0.8",
     "smoothscroll-for-websites": "^1.4.10",
     "swiper": "^8.1.4"
   }
