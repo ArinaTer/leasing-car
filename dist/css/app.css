@@ -546,7 +546,7 @@ body {
   color: #000000;
   position: relative;
   height: auto;
-  width: 100%;
+  width: 100vw;
   font-size: 16px;
   overflow-x: hidden;
   background-color: #ffffff;
@@ -606,14 +606,14 @@ a {
     background-color: #000000;
   }
 }
-.header__container {
+.header .container {
   height: 90px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 @media only screen and (max-width: 992px) {
-  .header__container {
+  .header .container {
     height: 80px;
   }
 }
@@ -681,16 +681,27 @@ a {
   display: flex;
   align-items: center;
   gap: 25px;
-  position: relative;
-}
-@media only screen and (max-width: 1280px) {
-  .header__right {
-    gap: 9px;
-  }
 }
 @media only screen and (max-width: 768px) {
   .header__right {
     display: none;
+  }
+}
+.header__nav-list {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+@media only screen and (max-width: 1280px) {
+  .header__nav-list {
+    gap: 9px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .header__nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
   }
 }
 .header__nav {
@@ -841,7 +852,7 @@ a {
   }
 }
 @media only screen and (max-width: 576px) {
-  .banner__container {
+  .banner .container {
     padding-left: 0;
     padding-right: 0;
   }
@@ -854,11 +865,12 @@ a {
 }
 .banner__swiper .swiper-slide .banner__swiper-body {
   opacity: 0;
+  transition: 0.8s;
+  overflow: hidden;
+  position: relative;
 }
 .banner__swiper .swiper-slide.swiper-slide-active .banner__swiper-body {
   opacity: 1;
-  transform: translate(0);
-  transition: transform 0.1s 0.3s cubic-bezier(0.4, 0, 0, 1), opacity 0.1s 0.1s cubic-bezier(0.4, 0, 0, 1);
 }
 .banner__swiper .swiper-pagination {
   bottom: 44px;
@@ -1111,77 +1123,80 @@ a {
     gap: 20px;
   }
 }
-.leasink-calc__row {
+.leasink-calc .form__row {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  gap: 32px;
 }
 @media only screen and (max-width: 1280px) {
-  .leasink-calc__row {
+  .leasink-calc .form__row {
     flex-wrap: wrap;
     gap: 47px 0;
   }
 }
 @media only screen and (max-width: 576px) {
-  .leasink-calc__row {
+  .leasink-calc .form__row {
     gap: 30px;
   }
 }
 @media only screen and (max-width: 1280px) {
-  .leasink-calc__row:nth-child(1) {
+  .leasink-calc .form__row:nth-child(1) {
     flex-direction: column;
     gap: 40px;
   }
 }
 @media only screen and (max-width: 576px) {
-  .leasink-calc__row:nth-child(1) {
+  .leasink-calc .form__row:nth-child(1) {
     gap: 20px;
   }
 }
 @media only screen and (max-width: 1280px) {
-  .leasink-calc__row:nth-child(1) .leasink-calc__col {
+  .leasink-calc .form__row:nth-child(1) .form__col {
     min-width: 100%;
   }
 }
 @media only screen and (max-width: 576px) {
-  .leasink-calc__row:nth-child(1) .leasink-calc__col {
+  .leasink-calc .form__row:nth-child(1) .form__col {
     gap: 8px;
   }
 }
 @media only screen and (max-width: 1280px) {
-  .leasink-calc__row:nth-child(1) .form-input {
+  .leasink-calc .form__row:nth-child(1) .form-input {
     width: 100%;
   }
 }
-.leasink-calc__col {
+.leasink-calc .form__col {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  min-width: 427px;
+  max-width: 32%;
+  flex-basis: 32%;
+  position: relative;
 }
 @media only screen and (max-width: 1280px) {
-  .leasink-calc__col {
+  .leasink-calc .form__col {
     min-width: 450px;
   }
 }
 @media only screen and (max-width: 992px) {
-  .leasink-calc__col {
+  .leasink-calc .form__col {
     min-width: 334px;
   }
 }
 @media only screen and (max-width: 576px) {
-  .leasink-calc__col {
+  .leasink-calc .form__col {
     gap: 8px;
     min-width: 280px;
   }
 }
-.leasink-calc__col .form-label {
+.leasink-calc .form__col .form-label {
   font-size: 16px;
   line-height: 136%;
   color: #575757;
 }
 @media only screen and (max-width: 576px) {
-  .leasink-calc__col .form-label {
+  .leasink-calc .form__col .form-label {
     font-size: 14px;
   }
 }
@@ -1192,6 +1207,7 @@ a {
   position: relative;
   background-color: #F3F3F4;
   border-radius: 16px;
+  width: 100%;
   padding: 16px 24px;
   font-size: 30px;
   line-height: 91%;
@@ -1305,7 +1321,7 @@ a {
   }
 }
 .leasink-calc__group .form-input-text-item {
-  right: 8px;
+  right: 25px;
   background-color: #EBEBEC;
   border-radius: 16px;
   font-size: 20px;
@@ -1313,6 +1329,11 @@ a {
   text-align: right;
   color: #575757;
   padding: 15px 17px;
+}
+@media only screen and (max-width: 1024px) {
+  .leasink-calc__group .form-input-text-item {
+    right: 20px;
+  }
 }
 @media only screen and (max-width: 576px) {
   .leasink-calc__group .form-input-text-item {
@@ -1364,7 +1385,7 @@ a {
   }
 }
 
-.modal {
+.modal-calc {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -1373,20 +1394,20 @@ a {
   z-index: 100;
   visibility: hidden;
 }
-.modal.show {
+.modal-calc.show {
   align-items: flex-end;
   display: flex;
   visibility: visible;
 }
-.modal.show .modal__container {
+.modal-calc.show .modal-calc__container {
   transform: translateY(0);
 }
-.modal__container {
+.modal-calc__container {
   position: relative;
   z-index: 1;
   width: 100%;
   background-color: #ffffff;
-  min-height: 745px;
+  min-height: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1395,49 +1416,44 @@ a {
   transform: translateY(100%);
   transition: all 0.5s ease;
 }
-@media only screen and (max-width: 992px) {
-  .modal__container {
-    min-height: 665px;
-  }
-}
 @media only screen and (max-width: 576px) {
-  .modal__container {
+  .modal-calc__container {
     min-height: 70%;
   }
 }
-.modal__content {
+.modal-calc__content {
   max-width: 655px;
 }
 @media only screen and (max-width: 992px) {
-  .modal__content {
+  .modal-calc__content {
     max-width: 100%;
     width: 100%;
     padding: 24px 36px 70px;
   }
 }
 @media only screen and (max-width: 576px) {
-  .modal__content {
+  .modal-calc__content {
     padding: 24px 20px 70px;
   }
 }
-.modal__button-close {
+.modal-calc__button-close {
   position: absolute;
   top: 48px;
   right: 48px;
 }
 @media only screen and (max-width: 576px) {
-  .modal__button-close {
+  .modal-calc__button-close {
     top: 24px;
     right: 20px;
   }
 }
 @media only screen and (max-width: 576px) {
-  .modal__button-close svg {
+  .modal-calc__button-close svg {
     width: 24px;
     height: 24px;
   }
 }
-.modal__title {
+.modal-calc__title {
   font-size: 54px;
   line-height: 120%;
   color: #111111;
@@ -1445,67 +1461,67 @@ a {
   font-family: "GilroyBold", arial, sans-serif;
 }
 @media only screen and (max-width: 576px) {
-  .modal__title {
+  .modal-calc__title {
     font-size: 22px;
     padding-bottom: 16px;
   }
 }
-.modal__subtitle {
+.modal-calc__subtitle {
   font-size: 16px;
   line-height: 150%;
   color: #575757;
 }
 @media only screen and (max-width: 576px) {
-  .modal__subtitle {
+  .modal-calc__subtitle {
     font-size: 14px;
   }
 }
-.modal__form {
+.modal-calc__form {
   padding: 44px 0 32px;
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
 @media only screen and (max-width: 576px) {
-  .modal__form {
+  .modal-calc__form {
     gap: 16px;
     padding: 15px 0 24px;
   }
 }
-.modal__row {
+.modal-calc .form__row {
   display: flex;
   gap: 32px;
 }
 @media only screen and (max-width: 576px) {
-  .modal__row {
+  .modal-calc .form__row {
     gap: 16px;
     flex-direction: column;
   }
 }
-.modal__row:nth-child(2) {
+.modal-calc .form__row:nth-child(2) {
   justify-content: space-between;
   border: 2px solid #F3F3F4;
   border-radius: 16px;
   padding: 29px 23px 29px 33px;
 }
 @media only screen and (max-width: 576px) {
-  .modal__row:nth-child(2) {
+  .modal-calc .form__row:nth-child(2) {
     border: none;
     padding: 0;
     gap: 16px;
   }
 }
-.modal__form-input {
+.modal-calc__form-input {
   position: relative;
   display: flex;
   flex-flow: column-reverse;
   width: 100%;
 }
-.modal .form-label, .modal .form-input {
+.modal-calc .form-label, .modal-calc .form-input {
   transition: all 0.2s;
   touch-action: manipulation;
 }
-.modal .form-label {
+.modal-calc .form-label {
   font-size: 16px;
   line-height: 150%;
   color: #575757;
@@ -1515,7 +1531,7 @@ a {
   transform: translate(0, -50%);
   font-family: "GilroyBold", arial, sans-serif;
 }
-.modal .form-input {
+.modal-calc .form-input {
   background: #F3F3F4;
   border-radius: 16px;
   padding: 18px 24px 6px;
@@ -1528,69 +1544,69 @@ a {
   -webkit-appearance: none;
   font-family: "GilroyBold", arial, sans-serif;
 }
-.modal .form-input:focus {
+.modal-calc .form-input:focus {
   outline: 0;
   border: 1px solid #FF9514;
   border-radius: 16px;
   box-shadow: 0 0 0 0.25rem rgba(255, 149, 20, 0.2);
 }
-.modal .form-input::placeholder {
+.modal-calc .form-input::placeholder {
   opacity: 0;
 }
-.modal .form-input:placeholder-shown + .form-label {
+.modal-calc .form-input:placeholder-shown + .form-label {
   cursor: text;
   max-width: 66.66%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.modal .form-input:placeholder-shown + .form-label ::-webkit-input-placeholder {
+.modal-calc .form-input:placeholder-shown + .form-label ::-webkit-input-placeholder {
   opacity: 0;
   transition: inherit;
 }
-.modal .form-input:focus::-webkit-input-placeholder {
+.modal-calc .form-input:focus::-webkit-input-placeholder {
   opacity: 1;
 }
-.modal .form-input:not(:placeholder-shown) + .form-label,
-.modal .form-input:focus + .form-label {
+.modal-calc .form-input:not(:placeholder-shown) + .form-label,
+.modal-calc .form-input:focus + .form-label {
   left: 20px;
   transform: translate(0, -100%) scale(0.8);
   cursor: pointer;
 }
 @media only screen and (max-width: 576px) {
-  .modal__agreement {
+  .modal-calc__agreement {
     order: 2;
     text-align: center;
   }
 }
-.modal__agreement p {
+.modal-calc__agreement p {
   font-size: 14px;
   line-height: 150%;
   color: rgba(17, 17, 17, 0.5);
 }
-.modal__agreement a {
+.modal-calc__agreement a {
   color: #111111;
 }
-.modal__button {
+.modal-calc__button {
   font-size: 16px;
   line-height: 150%;
   padding: 12px 24px;
   min-width: 174px;
 }
 @media only screen and (max-width: 576px) {
-  .modal__button {
+  .modal-calc__button {
     order: 1;
   }
 }
-.modal__socials {
+.modal-calc__socials {
   display: flex;
   gap: 16px;
   justify-content: center;
 }
-.modal__socials a {
+.modal-calc__socials a {
   transition: 0.5s;
 }
-.modal__socials a:hover svg rect {
+.modal-calc__socials a:hover svg rect {
   stroke: #E7E7E7;
 }
 
@@ -1624,15 +1640,15 @@ a {
   color: #ffffff;
   transition: 0.5s;
 }
-.button_primary:hover:not([disabled]) {
-  background-color: #111111;
-}
-.button_primary:active {
+.button_primary:active:not(:hover) {
   background-color: #575757;
 }
 .button_primary[disabled] {
   cursor: revert;
   opacity: 0.4;
+}
+.button_primary:hover:not([disabled]) {
+  background-color: #111111;
 }
 
 .button_outlined {
@@ -1641,16 +1657,17 @@ a {
   color: #FF9514;
   transition: 0.5s;
 }
-.button_outlined:hover:not([disabled]) {
-  color: #ffffff;
-  background-color: #FF9514;
-}
-.button_outlined:active {
+.button_outlined:active:not(:hover) {
   background-color: #FFA83D;
+  color: #ffffff;
 }
 .button_outlined[disabled] {
   cursor: revert;
   opacity: 0.4;
+}
+.button_outlined:hover:not([disabled]) {
+  color: #ffffff;
+  background-color: #FF9514;
 }
 
 .button_gray {
@@ -1659,15 +1676,15 @@ a {
   color: #ffffff;
   transition: 0.5s;
 }
-.button_gray:hover:not([disabled]) {
-  background-color: #111111;
-}
-.button_gray:active {
+.button_gray:active:not(:hover) {
   background-color: #575757;
 }
 .button_gray[disabled] {
   cursor: revert;
   opacity: 0.4;
+}
+.button_gray:hover:not([disabled]) {
+  background-color: #111111;
 }
 
 .transparent-overlay {

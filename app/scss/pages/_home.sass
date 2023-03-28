@@ -8,7 +8,7 @@
     +r(576)
         background-color: $black
 
-    &__container
+    .container
         height: 90px
         display: flex
         justify-content: space-between
@@ -68,11 +68,19 @@
         display: flex
         align-items: center
         gap: 25px
+        +r(768)
+            display: none
+
+    &__nav-list
+        display: flex
+        align-items: center
         position: relative
         +r(1280)
             gap: 9px
         +r(768)
-            display: none
+            flex-direction: column
+            align-items: flex-start
+            gap: 24px
 
     &__nav
         display: flex
@@ -201,7 +209,7 @@
     +r(576)
         padding: 80px 0 64px
 
-    &__container
+    .container
         +r(576)
             padding-left: 0
             padding-right: 0
@@ -213,11 +221,12 @@
             height: auto
             .banner__swiper-body
                 opacity: 0
+                transition: 0.8s
+                overflow: hidden
+                position: relative
             &.swiper-slide-active
                 .banner__swiper-body
                     opacity: 1
-                    transform: translate(0)
-                    transition: transform 0.1s 0.3s cubic-bezier(.4, 0, 0, 1), opacity 0.1s 0.1s cubic-bezier(.4, 0, 0, 1)
 
         .swiper-pagination
             bottom: 44px
@@ -427,24 +436,25 @@
             padding-top: 32px
             gap: 20px
 
-    &__row
+    .form__row
         display: flex
         justify-content: space-between
         align-items: flex-end
+        gap: 32px
         +r(1280)
             flex-wrap: wrap
             gap: 47px 0
         +r(576)
             gap: 30px
 
-    &__row:nth-child(1)
+    .form__row:nth-child(1)
         +r(1280)
             flex-direction: column
             gap: 40px
         +r(576)
             gap: 20px
 
-        .leasink-calc__col
+        .form__col
             +r(1280)
                 min-width: 100%
             +r(576)
@@ -454,11 +464,13 @@
             +r(1280)
                 width: 100%
 
-    &__col
+    .form__col
         display: flex
         flex-direction: column
         gap: 24px
-        min-width: 427px
+        max-width: 32%
+        flex-basis: 32%
+        position: relative
         +r(1280)
             min-width: 450px
         +r(992)
@@ -481,6 +493,7 @@
             position: relative
             background-color: #F3F3F4
             border-radius: 16px
+            width: 100%
             padding: 16px 24px
             font-size: 30px
             line-height: 91%
@@ -584,7 +597,7 @@
                 font-size: 22px
 
         .form-input-text-item
-            right: 8px
+            right: 25px
             background-color: #EBEBEC
             border-radius: 16px
             font-size: 20px
@@ -592,6 +605,8 @@
             text-align: right
             color: #575757
             padding: 15px 17px
+            +r(1024)
+                right: 20px
             +r(576)
                 font-size: 22px
 
@@ -627,7 +642,7 @@
             font-size: 22px
             max-width: 280px
 
-.modal
+.modal-calc
     position: fixed
     bottom: 0
     left: 0
@@ -640,7 +655,7 @@
         display: flex
         visibility: visible
 
-        .modal__container
+        .modal-calc__container
             transform: translateY(0)
 
     &__container
@@ -648,7 +663,7 @@
         z-index: 1
         width: 100%
         background-color: $white
-        min-height: 745px
+        min-height: 80%
         display: flex
         flex-direction: column
         align-items: center
@@ -656,8 +671,6 @@
         border-radius: 32px 32px 0px 0px
         transform: translateY(100%)
         transition: all .5s ease
-        +r(992)
-            min-height: 665px
         +r(576)
             min-height: 70%
 
@@ -708,14 +721,14 @@
             gap: 16px
             padding: 15px 0 24px
 
-    &__row
+    .form__row
         display: flex
         gap: 32px
         +r(576)
             gap: 16px
             flex-direction: column
 
-    &__row:nth-child(2)
+    .form__row:nth-child(2)
         justify-content: space-between
         border: 2px solid #F3F3F4
         border-radius: 16px

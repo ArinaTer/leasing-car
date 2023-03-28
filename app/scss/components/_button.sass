@@ -3,43 +3,47 @@
 	border-radius: 40px
 	color: $white
 	transition: .5s
-	&:hover:not([disabled])
-		background-color: #111111
 
-	&:active
+	&:active:not(:hover)
 		background-color: #575757
 
 	&[disabled]
 		cursor: revert
 		opacity: 0.4
+		
+	&:hover:not([disabled])
+		background-color: #111111
 
 .button_outlined
 	border: 1px solid $primary
 	border-radius: 40px
 	color: $primary
 	transition: .5s
-	&:hover:not([disabled])
-		color: $white
-		background-color: $primary
 
-	&:active
+	&:active:not(:hover)
 		background-color: #FFA83D
+		color: $white
 
 	&[disabled]
 		cursor: revert
 		opacity: 0.4
+
+	&:hover:not([disabled])
+		color: $white
+		background-color: $primary
 
 .button_gray
 	background-color: #F3F3F4
 	border-radius: 40px
 	color: $white
 	transition: .5s
-	&:hover:not([disabled])
-		background-color: #111111
 
-	&:active
+	&:active:not(:hover)
 		background-color: #575757
 
 	&[disabled]
 		cursor: revert
 		opacity: 0.4
+
+	&:hover:not([disabled])
+		background-color: #111111

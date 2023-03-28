@@ -10,9 +10,9 @@
 </head>
 
 <body>
-    <div class="app">
+    <main>
         <header class="header">
-            <div class="header__container container">
+            <div class="container">
                 <div class="header__left">
                     <div class="header__logo">
                         <a href="#" class="desctop">
@@ -28,16 +28,29 @@
                 </div>
                 <div class="header__right">
                     <nav class="header__nav">
-                        <div class="header__dropdown">
-                            <a href="#leasing" class="header__nav-link">Лизинг</a>
-                            <div class="header__dropdown-content">
-                                <a class="header__dropdown-link" href="#">Для личного пользования</a>
-                                <a class="header__dropdown-link" href="#">Для юридических диц</a>
-                                <a class="header__dropdown-link" href="#">Калькулятор</a>
-                            </div>
-                        </div>
-                        <a class="header__nav-link" href="#catalog">Каталог</a>
-                        <a class="header__nav-link" href="#about">О нас</a>
+                        <ul class="header__nav-list">
+                            <li class="header__dropdown">
+                                <a href="#leasing" class="header__nav-link">Лизинг</a>
+                                <ul class="header__dropdown-content">
+                                    <li>
+                                        <a class="header__dropdown-link" href="#">Для личного пользования</a>
+                                    </li>
+                                    <li>
+                                        <a class="header__dropdown-link" href="#">Для юридических диц</a>
+                                    </li>
+                                    <li>
+                                        <a class="header__dropdown-link" href="#">Калькулятор</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="header__nav-link" href="#catalog">Каталог</a>
+                            </li>
+                            <li>
+                                <a class="header__nav-link" href="#about">О нас</a>
+                            </li>
+
+                        </ul>
                     </nav>
                     <div class="header__button">
                         <button class="button_outlined" type="button" data-toggle="modal">Оставить заявку</button>
@@ -75,9 +88,17 @@
                         </svg>
                     </button>
                     <nav class="header__nav">
-                        <a href="#leasing" class="header__nav-link">Лизинг</a>
-                        <a class="header__nav-link" href="#catalog">Каталог</a>
-                        <a class="header__nav-link" href="#about">О нас</a>
+                        <ul class="header__nav-list">
+                            <li>
+                                <a href="#leasing" class="header__nav-link">Лизинг</a>
+                            </li>
+                            <li>
+                                <a class="header__nav-link" href="#catalog">Каталог</a>
+                            </li>
+                            <li>
+                                <a class="header__nav-link" href="#about">О нас</a>
+                            </li>
+                        </ul>
                     </nav>
                     <div class="header__button">
                         <button class="button_primary" type="button" data-toggle="modal">Оставить заявку</button>
@@ -86,7 +107,7 @@
             </div>
         </header>
         <section class="banner">
-            <div class="banner__container container">
+            <div class="container">
                 <div class="banner__swiper swiper">
                     <div class="banner__swiper-wrapper swiper-wrapper">
                         <div class="banner__swiper-slide swiper-slide">
@@ -94,7 +115,7 @@
                                 <div class="banner__swiper-headline">
                                     <h1 class="banner__swiper-title">Авто в лизинг для физических лиц</h1>
                                     <p class="banner__swiper-subtitle">Получите машину за 5 дней</p>
-                                    <button type="button" class="banner__swiper-button button_primary" id="loadButton">
+                                    <button type="button" class="banner__swiper-button button_primary">
                                         <span>Оставить заявку</span>
                                         <svg id="loading" width="21" height="21" viewBox="0 0 21 21" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -141,7 +162,7 @@
                                     <h1 class="banner__swiper-title">Авто в лизинг для юридических лиц</h1>
                                     <p class="banner__swiper-subtitle">Получите машину за 15 дней</p>
                                     <button type="button"
-                                        class="banner__swiper-button button_primary button_loading">Оставить
+                                        class="banner__swiper-button button_primary">Оставить
                                         заявку</button>
                                 </div>
                                 <div class="banner__swiper-img">
@@ -151,9 +172,9 @@
                         </div>
                         <div class="banner__swiper-pagination swiper-pagination"></div>
                     </div>
-                    <div class="banner__swiper-__nav-box">
-                        <div class="banner__swiper-__progress-box">
-                            <div class="banner__swiper-__progress"></div>
+                    <div class="banner__swiper__nav-box">
+                        <div class="banner__swiper__progress-box">
+                            <div class="banner__swiper__progress"></div>
                         </div>
                         <div class="banner__swiper-arrow">
                             <button class="banner__swiper-arrow-prev swiper-button-prev" type="button"></button>
@@ -170,13 +191,13 @@
             </div>
         </section>
         <section class="leasink-calc">
-            <div class="leasink-calc__container container">
+            <div class="container">
                 <div class="leasink-calc__title">
                     <h2>Рассчитайте стоимость <br> автомобиля в лизинг</h2>
                 </div>
                 <form class="leasink-calc__form" id="calc-form">
-                    <div class="leasink-calc__row">
-                        <div class="leasink-calc__col">
+                    <div class="form__row">
+                        <div class="form__col">
                             <label for="" class="form-label">Стоимость автомобиля</label>
                             <div class="leasink-calc__group">
                                 <input type="text" class="form-input" placeholder="3 300 000"
@@ -185,7 +206,7 @@
                                 <span class="form-input-text" id="basic-addon1">₽</span>
                             </div>
                         </div>
-                        <div class="leasink-calc__col">
+                        <div class="form__col">
                             <label for="" class="form-label">Первоначальный взнос</label>
                             <div class="leasink-calc__group">
                                 <input type="text" class="form-input" placeholder="420 000 ₽"
@@ -194,7 +215,7 @@
                                 <span class="form-input-text form-input-text-item" id="basic-addon2">13%</span>
                             </div>
                         </div>
-                        <div class="leasink-calc__col">
+                        <div class="form__col">
                             <label for="" class="form-label">Срок лизинга</label>
                             <div class="leasink-calc__group">
                                 <input type="text" class="form-input" placeholder="60" aria-describedby="basic-addon2">
@@ -203,20 +224,20 @@
                             </div>
                         </div>
                     </div>
-                    <div class="leasink-calc__row">
-                        <div class="leasink-calc__col">
+                    <div class="form__row">
+                        <div class="form__col">
                             <dl class="leasink-calc__result">
                                 <dt>Сумма договора лизинга</dt>
                                 <dd>4 467 313 ₽</dd>
                             </dl>
                         </div>
-                        <div class="leasink-calc__col">
+                        <div class="form__col">
                             <dl class="leasink-calc__result">
                                 <dt>Ежемесячный платеж от</dt>
                                 <dd>114 455 ₽</dd>
                             </dl>
                         </div>
-                        <div class="leasink-calc__col">
+                        <div class="form__col">
                             <button type="button" class="leasink-calc__button button_primary" disabled>Оставить
                                 заявку</button>
                         </div>
@@ -224,13 +245,13 @@
                 </form>
             </div>
         </section>
-    </div>
+    </main>
 
-    <div class="modal" id="modal">
+    <div class="modal-calc" id="modalCalc">
         <div class="transparent-overlay"></div>
-        <div class="modal__container">
-            <div class="modal__content">
-                <button class="modal__button-close">
+        <div class="modal-calc__container">
+            <div class="modal-calc__content">
+                <button class="modal-calc__button-close">
                     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="48" height="48" rx="24" fill="#F3F3F4" />
                         <path d="M30.5996 17.4004L17.4003 30.5997" stroke="#828282" stroke-width="1.5"
@@ -239,34 +260,34 @@
                             stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </button>
-                <div class="modal__title">
+                <div class="modal-calc__title">
                     <h2>Онлайн-заявка</h2>
                 </div>
-                <div class="modal__subtitle">
+                <div class="modal-calc__subtitle">
                     <p>Заполните форму, и мы вскоре свяжемся с вами, чтобы <br> ответить на все вопросы</p>
                 </div>
-                <form class="modal__form" action="">
-                    <div class="modal__row">
-                        <div class="modal__form-input" tabindex="0">
+                <form class="modal-calc__form" action="">
+                    <div class="form__row">
+                        <div class="modal-calc__form-input" tabindex="0">
                             <input id="phone-mask" class="form-input" id="phone" type="tel" placeholder="+7 (921) 123 45 67" name="tel"
                                 required />
                             <label class="form-label" for="phone">Телефон *</label>
                         </div>
-                        <div class="modal__form-input" tabindex="0">
+                        <div class="modal-calc__form-input" tabindex="0">
                             <input class="form-input" id="name" type="text" name="text" placeholder="Имя" required />
                             <label class="form-label" for="name">Имя</label>
                         </div>
                     </div>
-                    <div class="modal__row">
-                        <div class="modal__agreement">
+                    <div class="form__row">
+                        <div class="modal-calc__agreement">
                             <p>Нажимая на кнопку «Оставить заявку», я даю <br> согласие <a href="#">на обработку
                                     персональных
                                     данных</a></p>
                         </div>
-                        <button type="submit" class="modal__button button_primary" disabled>Оставить заявку</button>
+                        <button type="submit" class="modal-calc__button button_primary" disabled>Оставить заявку</button>
                     </div>
                 </form>
-                <div class="modal__socials">
+                <div class="modal-calc__socials">
                     <a href="#">
                         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
